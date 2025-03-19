@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imageCadastroUsuario"
+                android:layout_width="match_parent"
+                android:layout_height="340dp"
+                android:layout_gravity="center"
+                android:scaleType="centerCrop"
+                android:background="@color/black"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                tools:src="@drawable/imagem_capa_titanic" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/iconeVoltar"
+                android:layout_width="36dp"
+                android:layout_height="36dp"
+                android:layout_margin="15dp"
+                app:cardCornerRadius="18dp"
+                android:backgroundTint="@color/cor_principal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="32dp"
+                    android:layout_height="32dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/icone_voltar"
+                    />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginEnd="30dp"
+                android:layout_marginBottom="-6dp"
+                android:backgroundTint="@color/black"
+                android:background="@drawable/borda_arredondada"
+                app:layout_constraintBottom_toTopOf="@id/linearDadosPersonal"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="3"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imagemWhatsApp"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_margin="10dp"
+                        android:layout_gravity="center"
+                        app:tint="@color/white"
+                        android:src="@drawable/icone_play" />
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imagemInstagram"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_margin="18dp"
+                        android:layout_gravity="center"
+                        app:tint="@color/white"
+                        android:src="@drawable/icone_descricaco"/>
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/imagemEmail"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_margin="10dp"
+                        android:layout_gravity="center"
+                        app:tint="@color/white"
+                        android:src="@drawable/icone_elenco"/>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/linearDadosPersonal"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:backgroundTint="@color/cor_background_20"
+                android:orientation="vertical"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/imageCadastroUsuario">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewNome"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="20dp"
+                    android:fontFamily="@font/bebas_regular"
+                    android:textColor="@color/cor_principal"
+                    android:textSize="36sp"
+                    tools:text="Titanic" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewAno"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:gravity="end"
+                    android:fontFamily="@font/bebas_regular"
+                    android:textColor="@color/cor_principal"
+                    android:textSize="26sp"
+                    tools:text="2009" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/textViewDescricao"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="20dp"
+                    android:layout_marginBottom="20dp"
+                    android:textColor="@color/white"
+                    android:textSize="20sp"
+                    android:fontFamily="@font/bebas_regular"
+                    tools:text="Um artista pobre e uma jovem rica se conhecem e se apaixonam na fatídica viagem inaugural do Titanic em 1912. Embora esteja noiva do arrogante herdeiro de uma siderúrgica, a jovem desafia sua família e amigos em busca do verdadeiro amor." />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
